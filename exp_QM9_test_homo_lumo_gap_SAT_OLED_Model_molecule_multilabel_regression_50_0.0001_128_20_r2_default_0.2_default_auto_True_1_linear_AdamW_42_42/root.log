@@ -1,0 +1,125 @@
+2025-07-31 08:53:54 | 757 | INFO | OLED(QSAR)-qm9 | exp_suffix: QM9_test_homo_lumo_gap_SAT_OLED_Model_molecule_multilabel_regression_50_0.0001_128_20_r2_default_0.2_default_auto_True_1_linear_AdamW_42_42
+2025-07-31 08:53:54 | 758 | INFO | OLED(QSAR)-qm9 | Config: 
+{
+    "target_col_prefix": "TARGET",
+    "target_normalize": "auto",
+    "anomaly_clean": true,
+    "model_name": "SAT_OLED_Model",
+    "split_method": "5fold_random",
+    "split_seed": 42,
+    "seed": 42,
+    "logger_level": 1,
+    "patience": 20,
+    "max_epochs": 100,
+    "learning_rate": 0.0001,
+    "warmup_ratio": 0.03,
+    "batch_size": 128,
+    "max_norm": 5.0,
+    "cuda": true,
+    "amp": true,
+    "loss_key": "default",
+    "drop_out": 0.2,
+    "activate_key": "default",
+    "pre_norm": true,
+    "repeat": 1,
+    "lr_type": "linear",
+    "optim_type": "AdamW",
+    "task": "multilabel_regression",
+    "data_type": "molecule",
+    "epochs": 50,
+    "metrics": "r2",
+    "split": "random",
+    "remove_hs": false
+}
+2025-07-31 08:53:54 | 759 | INFO | OLED(QSAR)-qm9 | [-0.221, 0.0867, 0.3077]
+2025-07-31 08:53:54 | 760 | INFO | OLED(QSAR)-qm9 | [[ 0.378 -2.067  2.64 ]
+ [-0.37  -1.62   1.377]
+ [ 0.535 -1.664  0.163]
+ [ 0.712 -2.829 -0.735]
+ [-0.568 -3.564 -1.023]
+ [-0.936 -3.305 -2.469]
+ [-1.159 -2.221 -1.456]
+ [-2.479 -1.538 -1.248]
+ [ 0.126 -1.501 -1.253]
+ [ 0.732 -3.098  2.544]
+ [ 1.251 -1.433  2.831]
+ [-0.27  -2.014  3.521]
+ [-1.246 -2.255  1.228]
+ [-0.738 -0.595  1.513]
+ [ 1.459 -1.106  0.317]
+ [ 1.695 -3.157 -1.063]
+ [-0.99  -4.382 -0.45 ]
+ [-0.156 -3.195 -3.218]
+ [-1.835 -3.806 -2.818]
+ [-3.305 -2.243 -1.382]
+ [-2.568 -1.095 -0.253]
+ [-2.603 -0.734 -1.983]]
+2025-07-31 08:53:54 | 761 | INFO | OLED(QSAR)-qm9 | ['C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'N', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H']
+2025-07-31 08:53:55 | 677 | INFO | OLED(QSAR)-qm9 | Output directory already exists: ./exp_QM9_test_homo_lumo_gap_SAT_OLED_Model_molecule_multilabel_regression_50_0.0001_128_20_r2_default_0.2_default_auto_True_1_linear_AdamW_42_42
+2025-07-31 08:53:55 | 678 | INFO | OLED(QSAR)-qm9 | Warning: Overwrite output directory: ./exp_QM9_test_homo_lumo_gap_SAT_OLED_Model_molecule_multilabel_regression_50_0.0001_128_20_r2_default_0.2_default_auto_True_1_linear_AdamW_42_42
+2025-07-31 08:53:56 | 657 | INFO | OLED(QSAR)-qm9 | Model: 
+SAT_OLED_Model(
+  (embed_tokens): Embedding(31, 512, padding_idx=0)
+  (gpe_proj): NonLinearHead(
+    (linear1): Linear(in_features=128, out_features=128, bias=True)
+    (linear2): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dpe): DistanceExtractor(
+    (means): Embedding(1, 128)
+    (stds): Embedding(1, 128)
+    (mul): Embedding(961, 1)
+    (bias): Embedding(961, 1)
+  )
+  (ape): AngleExtractor(
+    (linear1): Linear(in_features=64, out_features=128, bias=True)
+    (linear2): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (classification_head): MaterialAttributePredictorHead(
+    (dense): Linear(in_features=512, out_features=512, bias=True)
+    (dropout): Dropout(p=0, inplace=False)
+    (out_proj): Linear(in_features=512, out_features=3, bias=True)
+  )
+  (encoder): MaterialStructureEncoder(
+    (model): BertEncoder(
+      (layer): ModuleList(
+        (0-17): 18 x BertLayer(
+          (attention): BertAttention(
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+              (LayerNorm): DyT((512,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (attention): SelfAttention(
+              (query): Linear(in_features=512, out_features=512, bias=True)
+              (key): Linear(in_features=512, out_features=512, bias=True)
+              (value): Linear(in_features=512, out_features=512, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=512, out_features=3072, bias=True)
+            (intermediate_act_fn): SwigLU()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=512, bias=True)
+            (LayerNorm): DyT((512,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (emb_layer_norm): DyT((512,), eps=1e-05, elementwise_affine=True)
+  )
+)
+2025-07-31 08:53:56 | 291 | INFO | OLED(QSAR)-qm9 | start test QM9 BY 3D-SAT-OLED-Model:SAT_OLED_Model
+2025-07-31 08:53:57 | 535 | INFO | OLED(QSAR)-qm9 | load model success!
+2025-07-31 08:54:09 | 332 | INFO | OLED(QSAR)-qm9 | Overall result (unit: Hartree): {'r2': 0.9981412391283757, 'mae': 0.000996675, 'mse': 2.3040363e-06, 'rmse': 0.0014911098, 'mape': 2.9673087876290083, 'median_ae': 0.0006670582, 'max_error': 0.011107561, 'corr': 0.9991336513274094}
+2025-07-31 08:54:09 | 339 | INFO | OLED(QSAR)-qm9 | Overall result (unit: eV): {'r2': 0.9981412393751503, 'mae': 0.027120918, 'mse': 0.001706047, 'rmse': 0.040575176, 'mape': 2.9673087565849223, 'median_ae': 0.018151661, 'max_error': 0.3022522, 'corr': 0.999133651413851}
+2025-07-31 08:54:09 | 351 | INFO | OLED(QSAR)-qm9 | Result for target 0 (homo) (unit: Hartree): {'r2': 0.9968170008590184, 'mae': 0.0007917266, 'mse': 1.5086895e-06, 'rmse': 0.0012282872, 'mape': 0.332156615331769, 'median_ae': 0.00048811734, 'max_error': 0.010696501, 'corr': 0.9984436987135413}
+2025-07-31 08:54:09 | 359 | INFO | OLED(QSAR)-qm9 | Result for target 0 (homo) (unit: eV): {'r2': 0.9968170010250548, 'mae': 0.021543989, 'mse': 0.0011171246, 'rmse': 0.033423413, 'mape': 0.3321566618978977, 'median_ae': 0.013282537, 'max_error': 0.29106665, 'corr': 0.9984436988571567}
+2025-07-31 08:54:09 | 351 | INFO | OLED(QSAR)-qm9 | Result for target 1 (lumo) (unit: Hartree): {'r2': 0.9991705254113799, 'mae': 0.0009225062, 'mse': 1.8484718e-06, 'rmse': 0.0013595852, 'mape': 8.049362897872925, 'median_ae': 0.00063647423, 'max_error': 0.008289687, 'corr': 0.9996271705124238}
+2025-07-31 08:54:09 | 359 | INFO | OLED(QSAR)-qm9 | Result for target 1 (lumo) (unit: eV): {'r2': 0.9991705254629705, 'mae': 0.025102688, 'mse': 0.0013687199, 'rmse': 0.036996216, 'mape': 8.049362897872925, 'median_ae': 0.017319381, 'max_error': 0.22557402, 'corr': 0.9996271705219502}
+2025-07-31 08:54:09 | 351 | INFO | OLED(QSAR)-qm9 | Result for target 2 (gap) (unit: Hartree): {'r2': 0.9984361911147288, 'mae': 0.0012757921, 'mse': 3.5549472e-06, 'rmse': 0.0018854567, 'mape': 0.5204068496823311, 'median_ae': 0.00087658316, 'max_error': 0.014336497, 'corr': 0.9993300847562631}
+2025-07-31 08:54:09 | 359 | INFO | OLED(QSAR)-qm9 | Result for target 2 (gap) (unit: eV): {'r2': 0.9984361916374257, 'mae': 0.03471608, 'mse': 0.0026322964, 'rmse': 0.05130591, 'mape': 0.5204067099839449, 'median_ae': 0.023853064, 'max_error': 0.39011598, 'corr': 0.9993300848624467}
+2025-07-31 08:54:09 | 768 | INFO | OLED(QSAR)-qm9 | Saved QM9 DataSet metrics to ./qm9_metrics/qm9_metrics.json 
+2025-07-31 08:54:09 | 770 | INFO | OLED(QSAR)-qm9 | Start drawing QM9 dataset metrics, saving to: qm9_metrics

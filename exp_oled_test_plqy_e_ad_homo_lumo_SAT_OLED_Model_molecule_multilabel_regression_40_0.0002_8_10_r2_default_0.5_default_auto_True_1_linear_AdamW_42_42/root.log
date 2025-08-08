@@ -1,0 +1,172 @@
+2025-07-31 08:53:40 | 776 | INFO | OLED(QSAR)-oled | exp_suffix: oled_test_plqy_e_ad_homo_lumo_SAT_OLED_Model_molecule_multilabel_regression_40_0.0002_8_10_r2_default_0.5_default_auto_True_1_linear_AdamW_42_42
+2025-07-31 08:53:40 | 777 | INFO | OLED(QSAR)-oled | Config: 
+{
+    "target_col_prefix": "TARGET",
+    "target_normalize": "auto",
+    "anomaly_clean": true,
+    "model_name": "SAT_OLED_Model",
+    "split_method": "5fold_random",
+    "split_seed": 42,
+    "seed": 42,
+    "logger_level": 1,
+    "patience": 10,
+    "max_epochs": 100,
+    "learning_rate": 0.0002,
+    "warmup_ratio": 0.03,
+    "batch_size": 8,
+    "max_norm": 5.0,
+    "cuda": true,
+    "amp": true,
+    "loss_key": "default",
+    "drop_out": 0.5,
+    "activate_key": "default",
+    "pre_norm": true,
+    "repeat": 1,
+    "lr_type": "linear",
+    "optim_type": "AdamW",
+    "task": "multilabel_regression",
+    "data_type": "molecule",
+    "epochs": 40,
+    "metrics": "r2",
+    "split": "random",
+    "remove_hs": true
+}
+2025-07-31 08:53:40 | 778 | INFO | OLED(QSAR)-oled | [0.0011965634314391278, 0.09812338000006093, -0.20634, -0.11183]
+2025-07-31 08:53:40 | 779 | INFO | OLED(QSAR)-oled | [[ 0.08  -0.089 -0.068]
+ [ 2.032 -0.505  0.505]
+ [ 2.908  0.36   0.78 ]
+ [ 2.897  1.654  0.491]
+ [ 1.839  2.252 -0.014]
+ [ 0.58   1.832 -0.146]
+ [-0.152  2.842 -0.64 ]
+ [ 0.657  3.842 -0.798]
+ [ 0.329  5.146 -1.32 ]
+ [ 1.315  6.124 -1.447]
+ [ 0.988  7.366 -1.959]
+ [-0.315  7.64  -2.344]
+ [-1.297  6.668 -2.218]
+ [-0.982  5.424 -1.709]
+ [ 1.923  3.53  -0.414]
+ [ 4.132 -0.102  1.472]
+ [ 4.182 -1.394  1.988]
+ [ 5.313 -1.83   2.653]
+ [ 6.398 -0.983  2.806]
+ [ 6.351  0.305  2.294]
+ [ 5.224  0.748  1.629]
+ [ 2.326  5.899 -1.145]
+ [ 1.751  8.123 -2.058]
+ [-0.566  8.611 -2.743]
+ [-2.311  6.885 -2.52 ]
+ [-1.728  4.651 -1.604]
+ [ 3.324 -2.038  1.867]
+ [ 5.349 -2.832  3.057]
+ [ 7.281 -1.325  3.327]
+ [ 7.198  0.964  2.416]
+ [ 5.164  1.744  1.224]
+ [-0.381 -6.363 -0.697]
+ [-0.33  -4.88  -0.528]
+ [-0.689 -4.287  0.686]
+ [-0.624 -2.917  0.82 ]
+ [-0.234 -2.113 -0.165]
+ [ 0.137 -2.663 -1.346]
+ [ 0.579 -1.725 -2.332]
+ [ 1.015 -1.782 -3.66 ]
+ [ 1.286 -0.457 -3.974]
+ [ 1.035  0.339 -2.928]
+ [ 0.615 -0.42  -1.952]
+ [ 0.086 -4.044 -1.546]
+ [-1.352 -6.747 -0.388]
+ [ 0.375 -6.833 -0.069]
+ [-0.2   -6.646 -1.73 ]
+ [-1.012 -4.894  1.517]
+ [-0.89  -2.443  1.754]
+ [ 1.116 -2.644 -4.288]
+ [ 1.643 -0.041 -4.895]
+ [ 0.387 -4.441 -2.503]
+ [-3.701  0.991 -1.848]
+ [-4.467  1.303 -0.729]
+ [-3.905  1.16   0.52 ]
+ [-2.59   0.705  0.623]
+ [-1.897  0.549  1.865]
+ [-2.296  0.718  3.13 ]
+ [-1.189  0.421  3.814]
+ [-0.153  0.081  3.05 ]
+ [-0.601  0.162  1.813]
+ [-1.859  0.388 -0.47 ]
+ [-2.407  0.541 -1.672]
+ [-4.1    1.099 -2.844]
+ [-5.481  1.658 -0.84 ]
+ [-4.436  1.394  1.429]
+ [-1.133  0.447  4.884]
+ [-1.785  0.305 -2.523]]
+2025-07-31 08:53:40 | 780 | INFO | OLED(QSAR)-oled | ['Ir', 'O', 'C', 'N', 'C', 'N', 'N', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'O', 'C', 'C', 'C', 'C', 'C', 'C', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'C', 'C', 'C', 'C', 'N', 'C', 'C', 'C', 'C', 'N', 'N', 'C', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'C', 'C', 'C', 'C', 'C', 'N', 'C', 'N', 'N', 'N', 'C', 'H', 'H', 'H', 'H', 'H']
+2025-07-31 08:53:40 | 696 | INFO | OLED(QSAR)-oled | Output directory already exists: ./exp_oled_test_plqy_e_ad_homo_lumo_SAT_OLED_Model_molecule_multilabel_regression_40_0.0002_8_10_r2_default_0.5_default_auto_True_1_linear_AdamW_42_42
+2025-07-31 08:53:40 | 697 | INFO | OLED(QSAR)-oled | Warning: Overwrite output directory: ./exp_oled_test_plqy_e_ad_homo_lumo_SAT_OLED_Model_molecule_multilabel_regression_40_0.0002_8_10_r2_default_0.5_default_auto_True_1_linear_AdamW_42_42
+2025-07-31 08:53:43 | 676 | INFO | OLED(QSAR)-oled | Model: 
+SAT_OLED_Model(
+  (embed_tokens): Embedding(31, 512, padding_idx=0)
+  (gpe_proj): NonLinearHead(
+    (linear1): Linear(in_features=128, out_features=128, bias=True)
+    (linear2): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (dpe): DistanceExtractor(
+    (means): Embedding(1, 128)
+    (stds): Embedding(1, 128)
+    (mul): Embedding(961, 1)
+    (bias): Embedding(961, 1)
+  )
+  (ape): AngleExtractor(
+    (linear1): Linear(in_features=64, out_features=128, bias=True)
+    (linear2): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (classification_head): MaterialAttributePredictorHead(
+    (dense): Linear(in_features=512, out_features=512, bias=True)
+    (dropout): Dropout(p=0, inplace=False)
+    (out_proj): Linear(in_features=512, out_features=4, bias=True)
+  )
+  (encoder): MaterialStructureEncoder(
+    (model): BertEncoder(
+      (layer): ModuleList(
+        (0-17): 18 x BertLayer(
+          (attention): BertAttention(
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=512, out_features=512, bias=True)
+              (LayerNorm): DyT((512,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (attention): SelfAttention(
+              (query): Linear(in_features=512, out_features=512, bias=True)
+              (key): Linear(in_features=512, out_features=512, bias=True)
+              (value): Linear(in_features=512, out_features=512, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=512, out_features=3072, bias=True)
+            (intermediate_act_fn): SwigLU()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=512, bias=True)
+            (LayerNorm): DyT((512,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (emb_layer_norm): DyT((512,), eps=1e-05, elementwise_affine=True)
+  )
+)
+2025-07-31 08:53:43 | 287 | INFO | OLED(QSAR)-oled | start test OLED QM BY 3D-SAT-OLED-Model:SAT_OLED_Model
+2025-07-31 08:53:46 | 551 | INFO | OLED(QSAR)-oled | load model success!
+2025-07-31 08:53:48 | 330 | INFO | OLED(QSAR)-oled | Overall result (unit: Hartree): {'r2': 0.8452156055945635, 'mae': 0.019304344, 'mse': 0.0045935675, 'rmse': 0.03686963, 'mape': 84.54172862693667, 'median_ae': 0.009522406, 'max_error': 0.24340102, 'corr': 0.9214392210070533}
+2025-07-31 08:53:48 | 338 | INFO | OLED(QSAR)-oled | Overall result (unit: eV): {'r2': 0.8452156058374853, 'mae': 0.07728605, 'mse': 0.014634009, 'rmse': 0.116337836, 'mape': 84.5417286735028, 'median_ae': 0.053061873, 'max_error': 0.62218714, 'corr': 0.9214392209960633}
+2025-07-31 08:53:48 | 353 | INFO | OLED(QSAR)-oled | Result for target 0 (plqy) (unit: -): {'r2': 0.7976267804323154, 'mae': 0.06836906, 'mse': 0.018319959, 'rmse': 0.13535124, 'mape': 330.42852878570557, 'median_ae': 0.031445265, 'max_error': 0.91579926, 'corr': 0.8955336727782233}
+2025-07-31 08:53:48 | 363 | INFO | OLED(QSAR)-oled | Result for target 0 (plqy) (unit: -): {'r2': 0.7976267804323154, 'mae': 0.06836906, 'mse': 0.018319959, 'rmse': 0.13535124, 'mape': 330.42852878570557, 'median_ae': 0.031445265, 'max_error': 0.91579926, 'corr': 0.8955336727782233}
+2025-07-31 08:53:48 | 353 | INFO | OLED(QSAR)-oled | Result for target 1 (e_ad) (unit: Hartree): {'r2': 0.864739122207499, 'mae': 0.0019593548, 'mse': 7.3128017e-06, 'rmse': 0.0027042192, 'mape': 1.963953673839569, 'median_ae': 0.0016121343, 'max_error': 0.018102534, 'corr': 0.9319153495714785}
+2025-07-31 08:53:48 | 363 | INFO | OLED(QSAR)-oled | Result for target 1 (e_ad) (unit: eV): {'r2': 0.8647391279490011, 'mae': 0.053316783, 'mse': 0.005414839, 'rmse': 0.07358559, 'mape': 1.963953673839569, 'median_ae': 0.043868423, 'max_error': 0.4925952, 'corr': 0.9319153542995694}
+2025-07-31 08:53:48 | 353 | INFO | OLED(QSAR)-oled | Result for target 2 (homo) (unit: Hartree): {'r2': 0.9001769809287378, 'mae': 0.0027221122, 'mse': 1.2750647e-05, 'rmse': 0.0035708048, 'mape': 1.3451967388391495, 'median_ae': 0.002124004, 'max_error': 0.012122452, 'corr': 0.9529311224592355}
+2025-07-31 08:53:48 | 363 | INFO | OLED(QSAR)-oled | Result for target 2 (homo) (unit: eV): {'r2': 0.9001769687742617, 'mae': 0.074072495, 'mse': 0.00944135, 'rmse': 0.097166605, 'mape': 1.3451969251036644, 'median_ae': 0.057796955, 'max_error': 0.3298688, 'corr': 0.9529311128931555}
+2025-07-31 08:53:48 | 353 | INFO | OLED(QSAR)-oled | Result for target 3 (lumo) (unit: Hartree): {'r2': 0.8183195388097019, 'mae': 0.0041668518, 'mse': 3.4248827e-05, 'rmse': 0.00585225, 'mape': 4.4292353093624115, 'median_ae': 0.0029082224, 'max_error': 0.027579814, 'corr': 0.9053767392192759}
+2025-07-31 08:53:48 | 363 | INFO | OLED(QSAR)-oled | Result for target 3 (lumo) (unit: eV): {'r2': 0.8183195461943631, 'mae': 0.11338585, 'mse': 0.025359893, 'rmse': 0.1592479, 'mape': 4.4292353093624115, 'median_ae': 0.07913685, 'max_error': 0.7504853, 'corr': 0.9053767440133057}
+2025-07-31 08:53:48 | 788 | INFO | OLED(QSAR)-oled | Saved OLED QM DataSet metrics to ./oled_metrics/oled_metrics.json 
+2025-07-31 08:53:48 | 790 | INFO | OLED(QSAR)-oled | Start drawing OLED QM dataset metrics, saving to: oled_metrics
