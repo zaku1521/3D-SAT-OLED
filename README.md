@@ -39,17 +39,18 @@ The **3D-SAT-OLED** model is a deep learning architecture based on a three-dimen
 ## Directory Structure
 
 ```
-SAT_OLED/
+3D-SAT-OLED/
 ├── main.py                       # Batch test main entry
 ├── test_oled.py                  # OLED dataset test script
 ├── test_qm9.py                   # QM9 dataset test script
 ├── draw.py                       # Visualization and plotting tools
 ├── check_versions.py             # Dependency version checker
+├── model_reproduction_videos/    # Videos for model reproduction
 ├── SAT_OLED_Model/               # Core model implementation
 │   ├── config/                   # Default model configurations
 │   ├── data/                     # Data processing and molecular structure generation
 │   ├── models/                   # Model architectures
-│   ├── transformers/    		  # Modified BERT 
+│   ├── transformers/             # Modified BERT 
 │   ├── tasks/                    # Training and data partitioning tasks
 │   ├── utils/                    # Utility functions
 │   ├── weights/                  # Pretrained models and dictionaries
