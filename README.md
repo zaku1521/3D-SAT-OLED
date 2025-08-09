@@ -1,4 +1,4 @@
-# 3D-SAT-OLED:  Geometry-Driven Attention Model with 3D Molecular Features for Multi-Property Prediction of OLED Materials 
+# 3D-SAT-OLED 
 
 The **3D-SAT-OLED** model is a deep learning architecture based on a three-dimensional spatial self-attention mechanism, designed for accurate prediction of key performance parameters of OLED materials. The model integrates molecular 3D structural information by incorporating a **Gaussian-kernel-based Geometric Property Extractor (GPE)** and embedding spatial positional encodings within the self-attention mechanism, thereby enhancing its ability to represent complex molecular conformations of OLED systems. Furthermore, the model employs a **Dynamic Tanh (DyT)** normalization mechanism and the **Swish-Gated Linear Unit (SwiGLU)** activation function to improve numerical stability and nonlinear modeling capacity. Experimental results demonstrate that 3D-SAT-OLED achieves **state-of-the-art (SOTA)** performance on both the QM9 and OLED-DFT datasets, with R², MAE, and other target property metrics significantly surpassing those of existing baseline models, showcasing strong generalization and predictive accuracy.
 
@@ -38,6 +38,8 @@ The **3D-SAT-OLED** model is a deep learning architecture based on a three-dimen
 
 ## Directory Structure
 
+## 
+
 ```
 3D-SAT-OLED/
 ├── main.py                       # Batch test main entry
@@ -45,7 +47,7 @@ The **3D-SAT-OLED** model is a deep learning architecture based on a three-dimen
 ├── test_qm9.py                   # QM9 dataset test script
 ├── draw.py                       # Visualization and plotting tools
 ├── check_versions.py             # Dependency version checker
-├── model_reproduction_videos/    # Videos for model reproduction
+├── model_reproduction_videos/    # Videos for model reproduction (see note)
 ├── SAT_OLED_Model/               # Core model implementation
 │   ├── config/                   # Default model configurations
 │   ├── data/                     # Data processing and molecular structure generation
@@ -57,6 +59,8 @@ The **3D-SAT-OLED** model is a deep learning architecture based on a three-dimen
 │   ├── oled/                     # OLED dataset
 │   └── qm9/                      # QM9 dataset
 ```
+
+> **Note:** Videos in `model_reproduction_videos/` are large in size. To avoid format errors during download, please download this directory separately.
 
 ## Datasets
 
